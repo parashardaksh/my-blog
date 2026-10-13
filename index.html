@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Satirical Blog</title>
+    <!-- Loads Tailwind directly from the CDN for static hosting -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #f4f4f0; font-family: sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        .brutal-border { border: 4px solid #000; }
+        .brutal-shadow { box-shadow: 8px 8px 0px #000; }
+        .article-row { border-bottom: 2px solid #000; transition: all 0.2s ease; text-decoration: none; display: block; }
+        
+        /* Hover effects */
+        .article-row:hover { background-color: #000; color: #fff; }
+        .article-row:hover h2 { color: #fff; }
+        .article-row:hover time { color: #fff; }
+        .article-row:hover .excerpt-text { color: #d1d5db; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-5xl mx-auto">
+        
+        <!-- Author Section -->
+        <header class="mb-12 brutal-border p-6 md:p-8 brutal-shadow bg-white flex flex-col md:flex-row items-center gap-6">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-extrabold serif mb-2 tracking-tighter uppercase">
+                    Your Name
+                </h1>
+                <p class="text-lg font-medium max-w-2xl text-gray-800">
+                    Writer specializing in digital comedy, scriptwriting, and SEO. Exploring the absurdities of modern digital culture, one post at a time.
+                </p>
+            </div>
+        </header>
+
+        <!-- Blog Feed -->
+        <main class="brutal-border bg-white">
+            <div class="bg-black text-white p-4 uppercase font-bold tracking-widest text-xs border-b-4 border-black">
+                Index / Latest Writing
+            </div>
+
+            <!-- Article 1 -->
+            <a href="#" class="article-row group p-6 md:p-8 relative cursor-pointer">
+                <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 justify-between">
+                    <h2 class="text-2xl md:text-4xl font-bold serif text-black transition-colors">
+                        The Absurdity of Digital Karma
+                    </h2>
+                    <time class="text-sm font-mono uppercase whitespace-nowrap text-gray-600 transition-colors">
+                        Oct 12, 2026
+                    </time>
+                </div>
+                <div class="mt-4 excerpt-text text-gray-700 text-lg hidden md:block">
+                    A satirical dive into how we measure our self-worth through internet points and fleeting trends.
+                </div>
+            </a>
+
+            <!-- Article 2 -->
+            <a href="#" class="article-row group p-6 md:p-8 relative cursor-pointer">
+                <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 justify-between">
+                    <h2 class="text-2xl md:text-4xl font-bold serif text-black transition-colors">
+                        50 Seconds of Raksha Bandhan Chaos
+                    </h2>
+                    <time class="text-sm font-mono uppercase whitespace-nowrap text-gray-600 transition-colors">
+                        Aug 28, 2026
+                    </time>
+                </div>
+                <div class="mt-4 excerpt-text text-gray-700 text-lg hidden md:block">
+                    Deconstructing the perfect short-form video script for sibling rivalry.
+                </div>
+            </a>
+
+        </main>
+    </div>
+</body>
+</html>
